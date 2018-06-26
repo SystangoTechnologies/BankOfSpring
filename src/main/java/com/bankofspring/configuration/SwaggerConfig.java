@@ -22,7 +22,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(getApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.systango.springBootBank.api.v1.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.bankofspring.api.v1.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
