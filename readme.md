@@ -19,12 +19,45 @@ Starter kit for booting up the development of a API oriented and transaction bas
 - **Swagger**         - In-built swagger2 documentation support
 - **Docker**          - Docker containers
 - **Junit**           - Unit testing framework
+- **H2**              - H2 database embedded version
 
 ## Application Structure
 
 ## Running the server locally
+The BankOfSpring application can be started using your favourite IDE and its run configuration support. If you are a terminal savvy, please use the following command -
+
+''''
+mvn spring-boot:run
+''''
 
 ## Docker
+BankOfSpring supports docker container out of the box. This boilerplate is meant to cater to both web based applications as well as scalable micro services written in Java. Please select one of the following two ways to use docker to build and run the application -
+
+** Dockerfile **
+To build a fresh image, use -
+''''
+docker build -t bankofspring .
+''''
+To run the new image, use -
+''''
+docker run -p 8080:8080 bankofspring
+''''
+
+** Docker-Compose **
+To build a fresh image, use -
+''''
+docker-compose build
+''''
+To run the new image, use -
+''''
+docker-compose up
+''''
+
+## Swagger Documentation
+Swagger documentation is in-built in this starter-kit and can be accessed at the following URL -
+''''
+http://<host-name>:8080/swagger-ui.html
+''''
 
 ## Unit test cases
 
