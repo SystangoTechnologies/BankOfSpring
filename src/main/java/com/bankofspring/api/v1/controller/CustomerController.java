@@ -22,20 +22,19 @@ import java.util.stream.Collectors;
 @RequestMapping("/v1/customer")
 public class CustomerController {
     @Autowired
-    CustomerService customerService;
+    private CustomerService customerService;
 
     @Autowired
-    ModelMapper mapper;
+    private ModelMapper mapper;
 
     @GetMapping(value = "/")
     public List<CustomerDto> getAllCustomers() {
         List<Customer> customers = customerService.getAllCustomers();
         if (customers != null && !customers.isEmpty()) {
-            List<CustomerDto> customerDtos = customers
+            return customers
                     .stream()
                     .map(customer -> mapper.map(customer, CustomerDto.class))
                     .collect(Collectors.toList());
-            return customerDtos;
         }
         return Collections.emptyList();
     }
@@ -44,8 +43,7 @@ public class CustomerController {
     public CustomerDto getCustomer(@PathVariable("ssn") String ssn) throws EntityNotFoundException {
         Customer customer = customerService.getCustomer(ssn);
         if (customer != null) {
-            CustomerDto resultCustomer = mapper.map(customer, CustomerDto.class);
-            return resultCustomer;
+            return mapper.map(customer, CustomerDto.class);
         }
         return null;
     }
@@ -55,8 +53,7 @@ public class CustomerController {
         CustomerDto customerDto = mapper.map(createCustomerRequest, CustomerDto.class);
         Customer customer = customerService.createCustomer(customerDto);
         if (customer != null) {
-            CustomerDto resultCustomer = mapper.map(customer, CustomerDto.class);
-            return resultCustomer;
+            return mapper.map(customer, CustomerDto.class);
         }
         return null;
     }
