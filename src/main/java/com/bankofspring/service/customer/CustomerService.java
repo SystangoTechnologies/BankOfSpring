@@ -2,8 +2,8 @@ package com.bankofspring.service.customer;
 
 import com.bankofspring.domain.model.Customer;
 import com.bankofspring.dto.CustomerDto;
-import com.bankofspring.exception.EntityNotFoundException;
 import com.bankofspring.exception.EntityException;
+import com.bankofspring.exception.EntityNotFoundException;
 
 import java.util.List;
 

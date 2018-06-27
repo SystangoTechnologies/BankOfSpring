@@ -2,9 +2,9 @@ package com.bankofspring.exception.handler;
 
 
 import com.bankofspring.exception.ApiError;
+import com.bankofspring.exception.BankException;
 import com.bankofspring.exception.DuplicateEntityException;
 import com.bankofspring.exception.EntityNotFoundException;
-import com.bankofspring.exception.BankException;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

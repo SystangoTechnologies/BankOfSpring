@@ -1,10 +1,10 @@
 package com.bankofspring.service.account;
 
 import com.bankofspring.domain.model.Account;
-import com.bankofspring.exception.EntityNotFoundException;
-import com.bankofspring.service.account.exception.InsufficientFundsException;
 import com.bankofspring.dto.AccountDto;
 import com.bankofspring.exception.EntityException;
+import com.bankofspring.exception.EntityNotFoundException;
+import com.bankofspring.service.account.exception.InsufficientFundsException;
 
 import java.math.BigDecimal;
 import java.util.List;

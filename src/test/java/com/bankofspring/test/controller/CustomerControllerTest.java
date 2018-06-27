@@ -71,7 +71,17 @@ public class CustomerControllerTest {
     }
 
     @Test
-    public void ut3_CreateCustomer() throws Exception{
+    public void ut3_GetCustomerBySsn_InvalidSsn() throws Exception {
+        mockMvc
+                .perform(MockMvcRequestBuilders.get("/v1/customer/AK02").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.apierror.status").value("NOT_FOUND"))
+                .andExpect(jsonPath("$.apierror.message").value("Customer was not found for parameters {ssn=AK02}"))
+                .andDo(print());
+    }
+
+    @Test
+    public void ut4_CreateCustomer() throws Exception{
         mockMvc
                 .perform(MockMvcRequestBuilders.post("/v1/customer/create")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -95,15 +105,6 @@ public class CustomerControllerTest {
                 .andDo(print());
     }
 
-    @Test
-    public void ut4_GetCustomerBySsn_InvalidSsn() throws Exception {
-        mockMvc
-                .perform(MockMvcRequestBuilders.get("/v1/customer/AK02").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound())
-                .andExpect(jsonPath("$.apierror.status").value("NOT_FOUND"))
-                .andExpect(jsonPath("$.apierror.message").value("Customer was not found for parameters {ssn=AK02}"))
-                .andDo(print());
-    }
 
     @Test
     public void ut5_CreateCustomer_Duplicate() throws Exception {
