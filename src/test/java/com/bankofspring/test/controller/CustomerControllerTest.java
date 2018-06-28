@@ -39,6 +39,12 @@ public class CustomerControllerTest {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
     }
 
+    /**
+     * Get all customers test.
+     * The test should result in returning the 5 customers which are present in the test database.
+     *
+     * @throws Exception
+     */
     @Test
     public void ut1_GetAllCustomers() throws Exception{
         mockMvc
@@ -48,6 +54,12 @@ public class CustomerControllerTest {
                 .andDo(print());
     }
 
+    /**
+     * Get customer by ssn test.
+     * The test should result in returning customer's details for SSN:AK01
+     *
+     * @throws Exception
+     */
     @Test
     public void ut2_GetCustomerBySsn() throws Exception{
         mockMvc
@@ -70,6 +82,12 @@ public class CustomerControllerTest {
                 .andDo(print());
     }
 
+    /**
+     * Get customer by invalid ssn test.
+     * The test should result in returning a Http 404 for a customer with invalid ssn.
+     *
+     * @throws Exception
+     */
     @Test
     public void ut3_GetCustomerBySsn_InvalidSsn() throws Exception {
         mockMvc
@@ -80,6 +98,12 @@ public class CustomerControllerTest {
                 .andDo(print());
     }
 
+    /**
+     * Create customer test.
+     * The test should result in adding a new customer to the database with SSN:TK01
+     *
+     * @throws Exception
+     */
     @Test
     public void ut4_CreateCustomer() throws Exception{
         mockMvc
@@ -105,7 +129,12 @@ public class CustomerControllerTest {
                 .andDo(print());
     }
 
-
+    /**
+     * Create duplicate customer test.
+     * Since a customer with SSN:TK01 has already been created in ut4, this test should result in Http 404.
+     * 
+     * @throws Exception
+     */
     @Test
     public void ut5_CreateCustomer_Duplicate() throws Exception {
         mockMvc
