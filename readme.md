@@ -1,4 +1,4 @@
-![BankOfSpring](https://github.com/SystangoTechnologies/Springboard/blob/master/src/main/resources/static/img/springboard-logo.png)
+![BankOfSpring](https://github.com/SystangoTechnologies/BankOfSpring/blob/master/src/main/resources/images/logo.png)
 
 ## BankOfSpring
 Production ready maven based Spring Boot starter kit application with example cases of handling transactions with Spring.
