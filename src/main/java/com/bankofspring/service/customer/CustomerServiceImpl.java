@@ -20,10 +20,10 @@ import java.util.stream.StreamSupport;
 @Service
 public class CustomerServiceImpl implements CustomerService {
     @Autowired
-    CustomerRepository customerRepository;
+    private CustomerRepository customerRepository;
 
     @Autowired
-    ModelMapper mapper;
+    private ModelMapper mapper;
 
     @Override
     public List<Customer> getAllCustomers() {

@@ -3,8 +3,12 @@ package com.bankofspring.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.DatabindContext;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 import com.fasterxml.jackson.databind.jsontype.impl.TypeIdResolverBase;
+import com.fasterxml.jackson.databind.type.SimpleType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,6 +18,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 
 import javax.validation.ConstraintViolation;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -148,4 +153,5 @@ class LowerCaseClassNameResolver extends TypeIdResolverBase {
     public JsonTypeInfo.Id getMechanism() {
         return JsonTypeInfo.Id.CUSTOM;
     }
+
 }

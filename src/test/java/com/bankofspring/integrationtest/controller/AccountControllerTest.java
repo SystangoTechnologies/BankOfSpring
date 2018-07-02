@@ -1,4 +1,4 @@
-package com.bankofspring.test.controller;
+package com.bankofspring.integrationtest.controller;
 
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -40,8 +40,8 @@ public class AccountControllerTest {
     }
 
     /**
-     * Get all accounts test.
-     * All the accounts in the database should be returned as a result of this test and validation of total 10 accounts should pass.
+     * Get all accounts integrationtest.
+     * All the accounts in the database should be returned as a result of this integrationtest and validation of total 10 accounts should pass.
      *
      * @throws Exception
      */
@@ -55,7 +55,7 @@ public class AccountControllerTest {
     }
 
     /**
-     * Get Account details test.
+     * Get Account details integrationtest.
      * Fetching the details for account with id 1 should be allowed and valid details should be returned.
      *
      * @throws Exception
@@ -91,7 +91,7 @@ public class AccountControllerTest {
     }
 
     /**
-     * Get Account by number test for invalid account number.
+     * Get Account by number integrationtest for invalid account number.
      * Trying to get an account's detail with invalid account number should result in a Http 400 error.
      *
      * @throws Exception
@@ -107,8 +107,8 @@ public class AccountControllerTest {
     }
 
     /**
-     * Create Account test.
-     * Account with details given in the test is created as a result of the test execution.
+     * Create Account integrationtest.
+     * Account with details given in the integrationtest is created as a result of the integrationtest execution.
      *
      * @throws Exception
      */
@@ -146,7 +146,7 @@ public class AccountControllerTest {
     }
 
     /**
-     * Create Account test for Invalid Customer.
+     * Create Account integrationtest for Invalid Customer.
      * Trying to create an account for a customer with id 100 should be disallowed.
      * A Http 400 should be thrown with message indicating that customer id 100 doesn't yet exist.
      *
@@ -166,7 +166,7 @@ public class AccountControllerTest {
     }
 
     /**
-     * Deposit Money test.
+     * Deposit Money integrationtest.
      * Account # 1 : Initial amount is $100
      * A deposit of $50 should be allowed and resultant balance should be $150.
      *
@@ -186,7 +186,7 @@ public class AccountControllerTest {
     }
 
     /**
-     * Withdraw Money test.
+     * Withdraw Money integrationtest.
      * Account # 1 : Amount after ut5 is $150
      * A withdrawal of 50 should be allowed and new account balance should be $100.
      *
@@ -206,7 +206,7 @@ public class AccountControllerTest {
     }
 
     /**
-     * Withdraw Money test for negative scenario.
+     * Withdraw Money integrationtest for negative scenario.
      * Account # 1 : Amount after ut6 is $100
      * A withdrawal of $200 should raise a InsufficientFund Exception and send a Http 400 response.
      *
@@ -226,10 +226,10 @@ public class AccountControllerTest {
     }
 
     /**
-     * Transfer Money test.
+     * Transfer Money integrationtest.
      * Account # 1 : Initial Amount 100
      * Account # 2 : Initial Amount 200
-     * Once the test completes, $50 should be transferred from Account # 1 to Account # 2
+     * Once the integrationtest completes, $50 should be transferred from Account # 1 to Account # 2
      *
      * @throws Exception
      */
@@ -249,10 +249,10 @@ public class AccountControllerTest {
     }
 
     /**
-     * Transfer Money test to a non existent recipient.
+     * Transfer Money integrationtest to a non existent recipient.
      * Account # 1 : Initial Amount 100
      * Account # 2 : doesn't exist
-     * Once the test completes, an Http 404 error should be returned indicating the recipient doesn't exist.
+     * Once the integrationtest completes, an Http 404 error should be returned indicating the recipient doesn't exist.
      *
      * @throws Exception
      */

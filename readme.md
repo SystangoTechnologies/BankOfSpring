@@ -62,13 +62,18 @@ http://<host-name>:8080/swagger-ui.html
 ````
 
 ## Unit test cases
-There are multiple unit test cases written to cover the different components of the application. However there is a global application test suite file _**BankOfSpringApplicationTests.java**_ that combines all the test cases in a logical manner to create a complete suite. It can be run from command prompt using the following command -
+There are multiple unit test cases written to cover the different components of the application. However there is a global application test suite file _**BankOfSpringApplicationUnitTests.java**_ that combines all the test cases in a logical manner to create a complete suite. It can be run from command prompt using the following command -
+
+````
+mvn clean test -Dtest=BankOfSpringApplicationUnitTests
+````
+
+## Integration test cases
+There are multiple integration test cases written to cover the different components of the application. However there is a global application test suite file _**BankOfSpringApplicationTests.java**_ that combines all the test cases in a logical manner to create a complete suite. It can be run from command prompt using the following command -
 
 ````
 mvn clean test -Dtest=BankOfSpringApplicationTests
 ````
-
-## Integration test cases
 
 ## Contributors
 [Arpit Khandelwal](https://www.linkedin.com/in/arpitkhandelwal1984/)

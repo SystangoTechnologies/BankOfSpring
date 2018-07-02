@@ -20,8 +20,8 @@ import lombok.experimental.Accessors;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CustomerDto {
     private Long customerId;
-    private String name;
     private String ssn;
+    private String name;
     private String address1;
     private String address2;
     private String city;

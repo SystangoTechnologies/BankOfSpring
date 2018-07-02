@@ -1,7 +1,7 @@
 package com.bankofspring;
 
-import com.bankofspring.test.controller.AccountControllerTest;
-import com.bankofspring.test.controller.CustomerControllerTest;
+import com.bankofspring.integrationtest.controller.AccountControllerTest;
+import com.bankofspring.integrationtest.controller.CustomerControllerTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
