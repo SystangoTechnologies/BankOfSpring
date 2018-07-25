@@ -1,4 +1,4 @@
-version: '3'
+version: '2.2'
 services:
     bankofspring:
         build:
@@ -7,3 +7,6 @@ services:
         ports:
             - '8080:8080'
         image: bankofspring
+        mem_limit: "256m"
+        cpu_count: 1
+        cpu_percent: 50

@@ -153,7 +153,7 @@ public class AccountControllerTest {
      * @throws Exception
      */
     @Test
-    public void ut4_CreateAccount_InvalidCustomer() throws Exception {
+    public void ut5_CreateAccount_InvalidCustomer() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.post("/v1/account/create")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -173,7 +173,7 @@ public class AccountControllerTest {
      * @throws Exception
      */
     @Test
-    public void ut5_DepositMoney() throws Exception {
+    public void ut6_DepositMoney() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.post("/v1/account/deposit")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -193,7 +193,7 @@ public class AccountControllerTest {
      * @throws Exception
      */
     @Test
-    public void ut6_WithdrawMoney() throws Exception {
+    public void ut7_WithdrawMoney() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.post("/v1/account/withdraw")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -213,7 +213,7 @@ public class AccountControllerTest {
      * @throws Exception
      */
     @Test
-    public void ut7_WithdrawMoney_InsufficientFunds() throws Exception {
+    public void ut8_WithdrawMoney_InsufficientFunds() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.post("/v1/account/withdraw")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -234,7 +234,7 @@ public class AccountControllerTest {
      * @throws Exception
      */
     @Test
-    public void ut8_TransferMoney() throws Exception {
+    public void ut9_TransferMoney() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.post("/v1/account/transfer")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -257,7 +257,7 @@ public class AccountControllerTest {
      * @throws Exception
      */
     @Test
-    public void ut9_TransferMoney_InvalidRecipient() throws Exception {
+    public void ut10_TransferMoney_InvalidRecipient() throws Exception {
         mockMvc
                 .perform(MockMvcRequestBuilders.post("/v1/account/transfer")
                         .contentType(MediaType.APPLICATION_JSON)
