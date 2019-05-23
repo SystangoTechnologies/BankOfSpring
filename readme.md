@@ -1,6 +1,6 @@
 ![BankOfSpring](https://github.com/SystangoTechnologies/BankOfSpring/blob/master/src/main/resources/images/logo.png)
 
-## BankOfSpring
+## BankOfSpring 1
 Production ready maven based Spring Boot starter kit application with example cases of handling transactions with Spring.
 
 ## Description
