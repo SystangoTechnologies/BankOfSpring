@@ -8,7 +8,7 @@ Starter kit for booting up the development of a API oriented and transaction bas
 
 ## Technology
 
-- **Spring Boot**     - Server side framework
+- **Spring Boot**     - Server side -framework
 - **JPA**             - Entity framework
 - **Lombok**          - Provides automated getter/setters
 - **Actuator**        - Application insights on the fly
